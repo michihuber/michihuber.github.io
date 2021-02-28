@@ -3,96 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <title>Michail Huber</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=fallback" rel="stylesheet">
   <style type="text/css" media="all">
-    @font-face{
-      font-family: 'CharterRegular';
-      src: url('charter_regular.eot');
-      src: url('charter_regular.eot?#iefix') format('embedded-opentype'),
-           url('charter_regular.woff') format('woff'),
-           url('charter_regular.ttf') format('truetype');
-    }
-
     body {
-      font-family: 'CharterRegular';
-      background-color: #333;
-      color: #EDEDED;
-    }
-
-    a {
-      color: #22ACAB;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #333;
+      font-size 16pt;
+      padding-top: 32pt;
     }
 
     #intro {
       margin: 50px 80px;
-      width: 480px;
+    }
+
+    h1 {
+      font-size: 64pt;
+      font-weight: 800;
+      margin: 0;
+      background: -webkit-linear-gradient(62deg, #461EB1, #6D52CD, #596FDA);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 32pt;
+      font-weight: 800;
+      margin: 0;
+      margin-top: 32pt;
+    }
+
+    p {
+      max-width: 640px;
+      font-size: 1.5rem;
+      font-weight 400;
+      margin-top: 1rem;
+      line-height: 1.4;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+      border-bottom: solid 6px #461EB1;
+      transition: all 300ms ease;
+    }
+
+    .reach-me {
+      display: flex;
+      align-items: center;
+      font-size: 16pt;
       margin-top: 3rem;
     }
 
-    dt {
-      font-weight: bold;
+    .social {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 0.25rem;
+      transition: all 300ms ease;
     }
 
-    dd {
-      margin-left: 0;
-      margin-bottom: 1rem;
+    .social:hover {
+      background: #f7f8f9;
+      transition: all 300ms ease;
     }
+
+    .social img {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+
+    .dn {
+      display: none;
+    }
+
+    .ml3 {
+      margin-left: 1rem;
+    }
+
   </style>
 </head>
 <body>
   <article id="intro">
-    <h1>Michail Huber</h1>
-
-    <p>I do contract and consulting work as a programmer.</p>
-
-    <p>I enjoy translating complex business requirements into simple software solutions and delivering them quickly, focusing on user experience, simplicity, and high maintainability.</p>
-
-    <p>My experience in building web application is extensive (starting in 1998) and I have a Magister degree in business administration. If you have an interesting business or software problem that I might help with, feel free to email me:
-    <script type="text/javascript">
-      document.write("<n uers=\"znvygb:z@zvpuvuhore.pbz\" ery=\"absbyybj\">z@zvpuvuhore.pbz</n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
-    </script>.
+    <h1>Michi Huber</h1>
+    <h2>Founder Arc Studio</h2>
+    <p>
+    I'm building <a href="https://www.arcstudiopro.com">Arc Studio</a>,
+    figuring out how people experiment and collaborate
+    when telling stories.
     </p>
 
-    <h2>Projects I am experienced in</h2>
-    <dl>
-      <dt>Greenfield web application projects</dt>
-      <dd>e.g. social apps, resource management tools, metrics dashboards.</dd>
+    <div class="reach-me">
+      <a class="social" href="https://twitter.com/michihuber">
+        <img src="twitter.svg" alt="twitter dot com" />
+      </a>
+      <a class="social" id="mail-btn">
+        <img src="mail.svg" alt="email me" />
+      </a>
+      <div class="dn ml3" id="mail">
+        reach me at: hello at this domain
+      </div>
+    </div>
 
-      <dt>Extending and maintaining web applications</dt>
-      <dd>e.g. adding payment capabilities, multi-tenancy, file uploads.</dd>
+    <script type="text/javascript" charset="utf-8">
+      let mailBtn = document.querySelector('#mail-btn');
+      let mail = document.querySelector('#mail');
+      mailBtn.onclick = function() {
+        mail.classList.toggle('dn');
+      }
+    </script>
 
-      <dt>Concurrent web applications</dt>
-      <dd>e.g. game servers.</dd>
-
-      <dt>Testing</dt>
-      <dd>TDD, testing frameworks, which tests (not) to write, continuous integration, keeping test suites fast, etc.</dd>
-
-      <dt>Working with legacy code</dt>
-      <dd>Writing tests for untested code, refactoring, simplifying code.<dd>
-
-      <dt>Monte Carlo simulations</dt>
-    </dl>
-
-    <h2>Some projects I worked on</h2>
-    <dl>
-      <dt><a href="https://my.mindnode.com">my.mindnode.com</a></dt>
-      <dd>A web storage backend for the popular MindNode mind-mapping app. Maintained the Ruby-based web application and added new features.</dd>
-
-      <dt><a href="https://boldpoker.net">BoldPoker</a></dt>
-      <dd>Worked on a game server that acts as a card dealing service, written in Elixir.</dd>
-
-      <dt>MAK City Map</dt>
-      <dd>Wrote a scavenger hunt web application for the Museum of Applied Arts (Museum für Angewandte Kunst) in Vienna. The project was devised and built from scratch (using Ruby on Rails) within a few days.</dd>
-
-      <dt>Valuation simulations for equity derivatives</dt>
-      <dd>Wrote valuation tools for structured investment products and employee share programs (Clojure, Ruby, VBA, C,...).</dd>
-
-      <dt><a href="https://www.kaffemik.at">Kaffemik</a></dt>
-      <dd>Together with my brother and some friends I conceptualised and launched a third wave coffee shop in the heart of Vienna within a few weeks.</dd>
-    </dl>
   </article>
 </body>
 </html>
